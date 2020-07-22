@@ -24,5 +24,11 @@ if mostrar_desde>df.shape[0] or mostrar_hasta>df.shape[0]:
     mostrar_desde, mostrar_hasta = 0, df.shape[0]
 st.write(df.loc[mostrar_desde:mostrar_hasta])
 
+ac_t1 = list(df['ac_t_ocioso1'])[-1]
+ac_t2 = list(df['ac_t_ocioso2'])[-1]
+t_max_e = list(df['max_tiempo_espera'])[-1]
 
+st.write('Acumulador tiempo ocioso 1 ', ac_t1)
+st.write('Acumulador tiempo ocioso 2 ',ac_t2)
+st.write('Tiempo maximo de espera ', t_max_e)
 
