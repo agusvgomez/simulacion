@@ -624,7 +624,7 @@ def generate_df(cant_iteraciones):
         #print()
         
     if len(df['estado_TORNO1'].unique())==1 and df['estado_TORNO1'].unique()[0]=='Libre':
-        df['ac_t_ocioso1'] = list(df['reloj'])[-1]  - df.loc[0]['reloj']
+        df['ac_t_ocioso1'][i] = list(df['reloj'])[-1]  - df.loc[0]['reloj']
     if len(df['estado_TORNO2'].unique())==1 and df['estado_TORNO2'].unique()[0]=='Libre':
-        df['ac_t_ocioso2'] = list(df['reloj'])[-1]  - df.loc[0]['reloj']
+        df['ac_t_ocioso2'][i] = list(df['reloj'])[-1]  - df.loc[0]['reloj']
     return df
